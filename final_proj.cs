@@ -24,13 +24,33 @@ void ShowArray(string[] array)
 int Count(string[] array)
 {
     int count = 0;
-    for (int i =0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if(array[i].Length <= 3) count++;
+        if (array[i].Length <= 3) count++;
     }
     return count;
 }
 
+string[] NewArray(int size, string[] array)
+{
+    string[] newarray = new string[size];
+    int index = 0;
+    for(int i=0; i<array.Length; i++)
+    {
+        if(array[i].Length <=3)
+        {
+            newarray[index]=array[i];
+            index++;
+        }
+    }
+    return newarray;
+}
 
-string[] newarray = Array(3);
+
+string[] array = Array(3);
+int size = Count(array);
+string[] newarray = NewArray(size, array);
+ShowArray(array);
+Console.WriteLine();
 ShowArray(newarray);
+
