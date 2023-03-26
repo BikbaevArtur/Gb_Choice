@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Написать программу, которая из имеющегося массива строк формирует массивы из строк, длина которых
+//меньше или равно 3 символам. Первоначальный массив можно ввести с клавиатуры, либо задать на старте
+//выполнение алгоритма
+
+string [] Array( int size)
+{
+    string[] array = new string[size];
+    for(int i =0; i < size; i++)
+    {
+        array[i] = Console.ReadLine();
+    }
+    return array;
+}
+
